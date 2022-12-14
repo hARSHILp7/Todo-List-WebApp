@@ -5,11 +5,11 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: #ffffff;
+    background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #000000;
+    background: #ffffff;
 }
 
 .App {
@@ -24,13 +24,13 @@
     flex-direction: column;
     align-items: center;
     min-width: 40%;
-    background-color: #ffffff;
+    background-color: #000000;
 
     h1 {
         font-family: 'Inter';
         font-weight: 900;
         font-size: 56px;
-        color: #000000;
+        color: #ffffff;
     }
 
     input {
@@ -39,8 +39,9 @@
         font-size: 18px;
         padding: 10px;
         margin-bottom: 10px;
-        background-color: #ffffff;
-        border: 2px solid #000000;
+        background-color: #000000;
+        color: #ffffff;
+        border: 2px solid #ffffff;
         border-radius: 5px;
     }
 
@@ -50,8 +51,8 @@
         font-size: 18px;
         padding: 10px 20px;
         border-radius: 5px;
-        color: #000000;
-        border: 2px solid #000000;
+        color: #ffffff;
+        border: 2px solid #ffffff;
         background-color: transparent;
         cursor: pointer;
         transition: background-color 0.3s ease,
@@ -59,8 +60,8 @@
     }
 
     button:hover {
-        background-color: #000000;
-        color: #ffffff;
+        background-color: #ffffff;
+        color: #000000;
     }
 
     .TodoList {
@@ -73,7 +74,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border: 2px solid #000000;
+            border: 2px solid #ffffff;
             border-radius: 5px;
             margin-top: 10px;
 
@@ -82,7 +83,7 @@
                 font-weight: 600;
                 font-size: 20px;
                 background-color: transparent;
-                color: #000000;
+                color: #ffffff;
                 border: 0;
                 border-radius: 5px 0 0 5px;
                 padding: 20px 40px 20px 20px;
@@ -90,8 +91,8 @@
             }
 
             .deleteBtn {
-                border-left: 2px solid #000000;
-                fill: #000000;
+                border-left: 2px solid #ffffff;
+                fill: #ffffff;
                 height: 20px;
                 padding: 22px;
                 cursor: pointer;
@@ -100,8 +101,8 @@
             }
 
             .deleteBtn:hover, .confirmBtn:hover {
-                fill: #ffffff;
-                background-color: #000000;
+                fill: #000000;
+                background-color: #ffffff;
             }
         }
     }
