@@ -3,9 +3,8 @@ import { useEffect, useState } from "react";
 
 const App = () => {
   let input = "";
-  const [todo, setTodo] = useState(
-    JSON.parse(localStorage.getItem("toDoList"))
-  );
+  const list = JSON.parse(localStorage.getItem("toDoList")) ? JSON.parse(localStorage.getItem("toDoList")) : [];
+  const [todo, setTodo] = useState( list );
 
   useEffect(() => {
     localStorage.setItem("toDoList", JSON.stringify(todo));
