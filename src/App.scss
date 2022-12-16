@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
 
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 7px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #000000;
+    background: #0f0e17;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #ffffff;
+    background: #fffffe;
 }
 
 .App {
@@ -24,85 +25,104 @@
     flex-direction: column;
     align-items: center;
     min-width: 40%;
-    background-color: #000000;
+    background-color: #0f0e17;
 
     h1 {
-        font-family: 'Inter';
-        font-weight: 900;
+        font-family: 'Open sans';
+        font-weight: 800;
         font-size: 56px;
-        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #fffffe;
     }
 
     input {
-        font-family: 'Inter';
+        font-family: 'Open sans';
         font-weight: 600;
-        font-size: 18px;
-        padding: 10px;
-        margin-bottom: 10px;
-        background-color: #000000;
-        color: #ffffff;
-        border: 2px solid #ffffff;
+        font-size: 20px;
+        letter-spacing: 1px;
+        padding: 20px;
+        margin-bottom: 15px;
+        color: #0f0e17;
+        background-color: #fffffe;
+        border: 0;
         border-radius: 5px;
+    }
+
+    input::placeholder {
+        font-family: 'Open sans';
+        font-weight: 400;
+        letter-spacing: 1px;
+        font-size: 18px;
+        color: #0f0e17;
     }
 
     button {
-        font-family: 'Inter';
+        font-family: 'Open sans';
         font-weight: 600;
         font-size: 18px;
-        padding: 10px 20px;
+        letter-spacing: 1px;
+        padding: 15px 30px;
         border-radius: 5px;
-        color: #ffffff;
-        border: 2px solid #ffffff;
-        background-color: transparent;
+        color: #0f0e17;
+        border: 0;
+        background-color: #ff8906;
         cursor: pointer;
-        transition: background-color 0.3s ease,
-                    color 0.3s ease;
+        transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     button:hover {
-        background-color: #ffffff;
-        color: #000000;
+        color: #ff8906;
+        background-color: #fffffe;
     }
 
     .TodoList {
-        margin: 50px 0;
-        display: flex;
-        flex-direction: column;
-        min-width: 400px;
+        margin: 20px 0 50px 0;
+        display: grid;
+        grid-template-columns: 500px;
+        grid-row-gap: 10px;
+        min-width: 350px;
 
         div {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            border: 2px solid #ffffff;
+            padding: 15px 10px 15px 20px;
+            border: 2px solid #a7a9be;
             border-radius: 5px;
-            margin-top: 10px;
+            background-color: #0f0e17;
 
-            span {
-                font-family: 'Inter';
-                font-weight: 600;
-                font-size: 20px;
+            input {
                 background-color: transparent;
-                color: #ffffff;
+                color: #fffffe;
                 border: 0;
+                background-color: transparent;
+                width: 78%;
                 border-radius: 5px 0 0 5px;
-                padding: 20px 40px 20px 20px;
-                margin: 0;
+                padding: 15px 10px;
+                margin: 0 auto 0 0;
+                transition: color 0.3s ease, background-color 0.3s ease;
             }
 
-            .deleteBtn {
-                border-left: 2px solid #ffffff;
-                fill: #ffffff;
+            input:focus {
+                background-color: #fffffe;
+                color: #0f0e17;
+            }
+
+            
+            .deleteBtn, .editBtn {
+                fill: #0f0e17;
+                background-color: #ff8906;
                 height: 20px;
-                padding: 22px;
+                padding: 20px;
+                margin-right: 10px;
+                border-radius: 5px;
                 cursor: pointer;
-                transition: fill 0.3s ease,
-                            background-color 0.3s ease;
+                transition: fill 0.3s ease, background-color 0.3s ease;
             }
 
-            .deleteBtn:hover, .confirmBtn:hover {
-                fill: #000000;
-                background-color: #ffffff;
+            .deleteBtn:hover, .editBtn:hover {
+                fill: #ff8906;
+                background-color: #fffffe;
             }
         }
     }
